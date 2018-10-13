@@ -16,12 +16,12 @@ if(isset($_POST['kirim'])){
         header('Location: index.php');
     }
 
-    if(empty($kepada)){
+    elseif(empty($kepada)){
         $_SESSION['gagal'] = "Gagal menambahkan pesan gan! Isi kolom dulu gan.";
         header('Location: index.php');
     }
 
-    if(empty($pesan)){
+    elseif(empty($pesan)){
         $_SESSION['gagal'] = "Gagal menambahkan pesan gan! Isi pesan dulu gan.";
         header('Location: index.php');
     }
@@ -43,8 +43,8 @@ if(isset($_POST['request'])){
 
     $fitur = mysqli_real_escape_string($konek, $_POST['req']);
     $msg = $fitur;
-    $headers = "From: khoerul271099@gmail.com". "\r\n" ;
-    $kirim = mail("khoerul27@gmail.com", "Request Fitur Bos", $msg, $headers);
+    $headers = "From: emalikamu@email.com". "\r\n" ;
+    $kirim = mail("emalikamu@email.com", "Request Fitur Bos", $msg, $headers);
 
     if(empty($kirim)){
         $_SESSION['gagal'] = "Gagal mengirim pesan gan.";
