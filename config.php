@@ -1,3 +1,3 @@
 <?php
 
-$konek = mysqli_connect("sql12.freemysqlhosting.net", "sql12260295", "rah4rmINaZ", "sql12260295");
+$konek = mysqli_connect("db host", "db username", "db pass", "db name");
