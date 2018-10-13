@@ -53,10 +53,6 @@ if(isset($_POST['request'])){
     if(!empty($kirim)){
         $_SESSION['sukses'] = "Sukses mengirim pesan gan.";
     header('location: index.php'); }
-
-    else{
-        $_SESSION['sukses'] = "Masuk ke else";
-    header('location: index.php'); }
 }
 
 else {
